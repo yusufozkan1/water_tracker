@@ -1,0 +1,33 @@
+name: water_tracker
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0' # SDK sürümünü güncelledik (Önemli!)
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  
+  # --- KRİTİK GÜNCELLEMELER ---
+  # En stabil ve hatasız sürümler:
+  shared_preferences: ^2.3.5       # 2.5.x yerine 2.3.x (Gradle hatasını çözer)
+  flutter_local_notifications: ^18.0.1 # En kararlı bildirim sürümü
+  timezone: ^0.10.0
+  flutter_timezone: ^3.0.1           # Required for local timezone detection
+  flutter_foreground_task: ^8.10.3   # Production background timer service
+  synchronized: ^3.3.0+3           # Mutex Lock için gerekli
+  audioplayers: ^6.1.0             # Timer completion sound
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sounds/
